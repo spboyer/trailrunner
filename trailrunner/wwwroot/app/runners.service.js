@@ -7,11 +7,18 @@
 
     runnersService.$inject = ['$http'];
     function runnersService($http) {
-        this.getRunners = getRunners;
 
-        ////////////////
+        var service = {
+            runners: [],
+            getRunners: getRunners
+        };
+        return service;
 
         function getRunners() { }
-            return $http.get('/api/runner');
+            console.log('getting runners');
+            return $http.get('/api/runner')
+                .success(function(data){
+                    service.runners = data;
+                });
         }
 })();
