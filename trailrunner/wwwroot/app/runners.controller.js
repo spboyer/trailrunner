@@ -16,10 +16,10 @@
             console.log('activated');
 
             $http.get('/api/runner')
-                .success(function (data) {
-                    vm.runners = data;
+                .then(function (response) {
+                    vm.runners = response.data;
                 })
-                .error(function (http, status, func, httpObj) {
+                .catch(function (http, status, func, httpObj) {
                     console.log('error getting data', http, status, func, httpObj);
                 });
         }
