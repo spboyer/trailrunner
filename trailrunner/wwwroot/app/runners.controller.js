@@ -5,7 +5,7 @@
         .module('app')
         .controller('RunnersController', RunnersController);
 
-    RunnersController.$inject = ['RunnersController'];
+    RunnersController.$inject = ['RunnersService'];
     function RunnersController(RunnersService) {
         var vm = this;
 
