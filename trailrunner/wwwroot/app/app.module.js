@@ -2,8 +2,7 @@
     'use strict';
 
     angular.module('app', [
-        'ui.router',
-        'RunnersService'
+        'ui.router'
     ]);
 
 })();

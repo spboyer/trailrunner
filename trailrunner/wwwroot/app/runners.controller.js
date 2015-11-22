@@ -5,7 +5,8 @@
         .module('app')
         .controller('RunnersController', RunnersController);
 
-    function RunnersController() {
+    RunnersController.$inject = ['RunnersController'];
+    function RunnersController(RunnersService) {
         var vm = this;
 
         activate();

@@ -2,16 +2,12 @@
     'use strict';
 
     angular
-        .module('app')
-        .config(initRouter)
-        .config(initRoutes);
+      .module('app')
+      .config(initRouter);
 
-    function initRouter($locationProvider, $urlRouterProvider) {
+    function initRouter($locationProvider, $stateProvider, $urlRouterProvider) {
         $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise('/');
-    }
-
-    function initRoutes($stateProvider) {
         $stateProvider
             .state('home', {
                 url: '/',
