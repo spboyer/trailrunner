@@ -9,7 +9,7 @@ Install using npm
 npm install -g yo generator-aspnet
 ```
 
-Create a Web API Project
+##Create a Web API Project
 
 ```
 $ yo aspnet
@@ -32,3 +32,8 @@ $ yo aspnet:MvcController PeopleController
 * Add the runner Class
 * Add the code for RunnerController
 * Add the routes for [HttpGetAttribute]
+* Add CamelCasePropertyNameContractResolver to Startup.cs
+
+##Add a static site
+* `bower install angular`
+* 
