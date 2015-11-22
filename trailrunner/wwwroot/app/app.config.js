@@ -15,7 +15,7 @@
                 controller: 'HomeController',
                 controllerAs: 'vm'
             })
-            .state('admin', {
+            .state('runners', {
                 url: '/runners',
                 templateUrl: 'app/runners.html',
                 controller: 'RunnersController',
