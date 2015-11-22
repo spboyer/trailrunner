@@ -14,18 +14,18 @@
 
         function activate() {
             console.log('activated');
+           // vm.runners = [{"first": "Shayne", "last": "Boyer", "favoriteBeer": "Guiness"}];
+           // console.log(vm.runners);
 
-            vm.runners = [{"first": "Shayne", "last": "Boyer", "favoriteBeer": "Guiness"}];
-
-            console.log(vm.runners);
-
-            RunnersService.getRunners()
+            vm.runners = function(){
+               RunnersService.getRunners()
                 .success(function(data){
                     vm.runners = data;
-                }).
-                error(function(http, status, fnc, httpObj){
-                    console.log('getting runners failed', http, status, fnc, httpObj);
+                })
+                .error(function(http, status, func, httpObj){
+                    console.log('error getting data', http, status, func, httpObj);
                 });
+            };
         }
     }
 })();
