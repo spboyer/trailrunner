@@ -1,0 +1,19 @@
+{
+   "webroot": "wwwroot",
+   "server" : "Microsoft.AspNet.Server.Kestrel",
+   "app": "MyProjectName",
+   "environment": "Development",
+   "detailedErrors": true
+}
+
+/* APP ENVIRONMENT VARIABLES
+ASPNET_WEBROOT=wwwroot
+ASPNET_SERVER=Microsoft.AspNet.Server.Kestrel
+ASPNET_APP=MyProjectReference
+ASPNET_ENVIRONMENT=Development
+ASPNET_DETAILEDERRORS=true
+
+Command Line
+dnx web --webroot "wwwroot" --app "MyProjectName" --environment "Development" --detailedErrors true
+dotnet run --webroot "wwwroot" --app "MyProjectName" --environment "Development" --detailedErrors true
+*/
